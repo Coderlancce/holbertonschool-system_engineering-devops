@@ -42,7 +42,7 @@ def recurse(subreddit, hot_list=[], after=""):
             post = child.get("data")
             hot_list.append(post.get("title"))
 
-    except:
+    except Exception:
         return None
 
     return recurse(subreddit, hot_list, after)
